@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1614856380 source:c:\users\tamás\documents\proglabor2\lab_04-master-7168a0186c36243f78ceafe8b775da07c048b876\resistor.cpp
+	"resistor.h"
+
+1551241093 c:\users\tamás\documents\proglabor2\lab_04-master-7168a0186c36243f78ceafe8b775da07c048b876\resistor.h
+	<iostream>
+	"elkeszult.h"
+
+1614856380 c:\users\tamás\documents\proglabor2\lab_04-master-7168a0186c36243f78ceafe8b775da07c048b876\elkeszult.h
+
+1614850820 source:c:\users\tamás\documents\proglabor2\lab_04-master-7168a0186c36243f78ceafe8b775da07c048b876\resistor_test2.cpp
+	<iostream>
+	<sstream>
+	"gtest_lite.h"
+	"resistor.h"
+
+1551241093 c:\users\tamás\documents\proglabor2\lab_04-master-7168a0186c36243f78ceafe8b775da07c048b876\gtest_lite.h
+	<iostream>
+	<cassert>
+	<cmath>
+	<cstring>
+	<limits>
+	<string>
+	<fstream>
+	"memtrace.h"
+
