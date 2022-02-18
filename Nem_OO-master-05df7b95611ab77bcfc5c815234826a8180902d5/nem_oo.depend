@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1613606701 source:c:\users\tamás\downloads\nem_oo-master-05df7b95611ab77bcfc5c815234826a8180902d5\nem_oo-master-05df7b95611ab77bcfc5c815234826a8180902d5\memtrace.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+
+1613606701 c:\users\tamás\downloads\nem_oo-master-05df7b95611ab77bcfc5c815234826a8180902d5\nem_oo-master-05df7b95611ab77bcfc5c815234826a8180902d5\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<list>
+	<map>
+	<algorithm>
+	<functional>
+	<memory>
+	<iomanip>
+	<locale>
+	<typeinfo>
+	<ostream>
+	<stdexcept>
+
+1614013947 source:c:\users\tamás\downloads\nem_oo-master-05df7b95611ab77bcfc5c815234826a8180902d5\nem_oo-master-05df7b95611ab77bcfc5c815234826a8180902d5\nem_oo.cpp
+	<cstring>
+	<cctype>
+	"nem_oo.h"
+	<string>
+	<math.h>
+
+1614000156 c:\users\tamás\downloads\nem_oo-master-05df7b95611ab77bcfc5c815234826a8180902d5\nem_oo-master-05df7b95611ab77bcfc5c815234826a8180902d5\nem_oo.h
+	<cmath>
+	<iostream>
+	"memtrace.h"
+
+1613606701 source:c:\users\tamás\downloads\nem_oo-master-05df7b95611ab77bcfc5c815234826a8180902d5\nem_oo-master-05df7b95611ab77bcfc5c815234826a8180902d5\nem_oo_teszt.cpp
+	<iostream>
+	<cstring>
+	<locale>
+	<windows.h>
+	"nem_oo.h"
+	"max.hpp"
+
+1614010979 c:\users\tamás\downloads\nem_oo-master-05df7b95611ab77bcfc5c815234826a8180902d5\nem_oo-master-05df7b95611ab77bcfc5c815234826a8180902d5\max.hpp
+	"nem_oo.h"
+
