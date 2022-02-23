@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1582131033 source:c:\users\tamás\documents\proglabor2\2022\lab_02-master-761598472f2005ec4cf3fb010954d6ea1de1aca2\string2_cpp\memtrace.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+
+1582131033 c:\users\tamás\documents\proglabor2\2022\lab_02-master-761598472f2005ec4cf3fb010954d6ea1de1aca2\string2_cpp\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<list>
+	<map>
+	<algorithm>
+	<functional>
+
+1582131033 source:c:\users\tamás\documents\proglabor2\2022\lab_02-master-761598472f2005ec4cf3fb010954d6ea1de1aca2\string2_cpp\string2_main.cpp
+	<cstring>
+	"memtrace.h"
+	"gtest_lite.h"
+	"string2.h"
+
+1582131033 c:\users\tamás\documents\proglabor2\2022\lab_02-master-761598472f2005ec4cf3fb010954d6ea1de1aca2\string2_cpp\gtest_lite.h
+	<iostream>
+	<cassert>
+	<cmath>
+	<cstring>
+	<limits>
+	<string>
+	<fstream>
+	"memtrace.h"
+
+1645654569 c:\users\tamás\documents\proglabor2\2022\lab_02-master-761598472f2005ec4cf3fb010954d6ea1de1aca2\string2_cpp\string2.h
+
+1645654554 source:c:\users\tamás\documents\proglabor2\2022\lab_02-master-761598472f2005ec4cf3fb010954d6ea1de1aca2\string2_cpp\string2.cpp
+	<iostream>
+	<cstring>
+	"string2.h"
+	"memtrace.h"
+	"string2.h"
+

@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1582131033 source:c:\users\tamás\documents\proglabor2\2022\lab_02-master-761598472f2005ec4cf3fb010954d6ea1de1aca2\string1\memtrace.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+
+1582131033 c:\users\tamás\documents\proglabor2\2022\lab_02-master-761598472f2005ec4cf3fb010954d6ea1de1aca2\string1\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<algorithm>
+
+1643213818 source:c:\users\tamás\documents\proglabor2\2022\lab_02-master-761598472f2005ec4cf3fb010954d6ea1de1aca2\string1\string1.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	"memtrace.h"
+	"string1.h"
+
+1582131033 c:\users\tamás\documents\proglabor2\2022\lab_02-master-761598472f2005ec4cf3fb010954d6ea1de1aca2\string1\string1.h
+
+1582131033 source:c:\users\tamás\documents\proglabor2\2022\lab_02-master-761598472f2005ec4cf3fb010954d6ea1de1aca2\string1\string1_main.c
+	<stdio.h>
+	"memtrace.h"
+	"string1.h"
+
