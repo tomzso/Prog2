@@ -1,65 +1,31 @@
 
-#include "vektor.h"
-
-size_t Vektor::defSize=10;
-
-double Vektor::defValue=0;
 
 
-/// Másoló konstruktor. Készítse el a vektor.cpp fájlban!
-    Vektor::Vektor(const Vektor& v){
-        nElements=v.size();
-        pVec=new double[nElements]
-        for(int i=0;i<nElements;i++){
-            pVec[i]=v.pVec[i];
 
-        }
+
+class Ember{
+    char* nev;
+    int szulEv;
+public:
+    Ember():szulEv(2001){
+        nev=new char[7];
+        strcpy(nev,"V6AO9G\0");
+    //nev[6]="\0";
     }
-
-/// Értékadó operátor. Készítse el a vektor.cpp fájlban!
-    Vektor& Vektor::operator=(const Vektor& v){
-        if(this!=&v){
-            delete[] pVec;
-            nElements=v.size();
-            pVec=new double[nElements];
-            for( int i=0;i<nElements;i++){
-                pVec[i]=v.pvec[i];
-
-            }
-
-        }
-        return *this;
-
-
+    int getszulEv() const{
+        return szulEv;
     }
+    Ember(const char* n, int ev) ;
+    Ember(const Ember& e);
+    Ember& operator=(const Ember& e);
+    const char* getNev() const;
+    int getKor(int ev) const;
+    const char* foglalkozas() const;
+    ~Ember();
 
-/// Destruktor. Készítse el a vektor.cpp fájlban!
-    Vektor::~Vektor(){
-        delete[] pVec;
+};
 
 
-    }
 
-/// Indexoperátorok. Készítse el a vektor.cpp fájlban!
-/// Túlcímzés esetén az Ön Neptun-kódját tartalmazó const char* típusú kivételt dob!
-/// @param idx - index értéke
-/// @return    - referencia az adott elemre
 
-    double& Vektor::operator[](size_t idx){
-        if(nElements>=idx){
-            throw "V6AO9G";
-
-        }
-
-        return pVec[idx];
-
-    }
-    const double& Vektor::operator[](size_t idx) const{
-        if(nElements>=idx){
-            throw "V6AO9G";
-
-        }
-
-        return pVec[idx];
-
-    }
+#endif // EMBER_H_INCLUDED
