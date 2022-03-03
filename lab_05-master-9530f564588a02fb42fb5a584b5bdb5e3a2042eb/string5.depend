@@ -1,0 +1,73 @@
+# depslib dependency file v1.0
+1615363244 source:c:\users\tamás\documents\proglabor2\2022 onallo\lab_05-master-9530f564588a02fb42fb5a584b5bdb5e3a2042eb\memtrace.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+
+1615363244 c:\users\tamás\documents\proglabor2\2022 onallo\lab_05-master-9530f564588a02fb42fb5a584b5bdb5e3a2042eb\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<list>
+	<map>
+	<algorithm>
+	<functional>
+	<memory>
+	<iomanip>
+	<locale>
+	<typeinfo>
+	<ostream>
+	<stdexcept>
+	<ctime>
+
+1615363244 source:c:\users\tamás\documents\proglabor2\2022 onallo\lab_05-master-9530f564588a02fb42fb5a584b5bdb5e3a2042eb\rendez.cpp
+	<iostream>
+	<cstring>
+	<cstdlib>
+	<clocale>
+	<windows.h>
+	"rendez.h"
+	"rendez_u8.h"
+	"string5.h"
+
+1615363244 c:\users\tamás\documents\proglabor2\2022 onallo\lab_05-master-9530f564588a02fb42fb5a584b5bdb5e3a2042eb\rendez.h
+
+1615363244 c:\users\tamás\documents\proglabor2\2022 onallo\lab_05-master-9530f564588a02fb42fb5a584b5bdb5e3a2042eb\rendez_u8.h
+
+1645787798 c:\users\tamás\documents\proglabor2\2022 onallo\lab_05-master-9530f564588a02fb42fb5a584b5bdb5e3a2042eb\string5.h
+	<iostream>
+
+1645785912 source:c:\users\tamás\documents\proglabor2\2022 onallo\lab_05-master-9530f564588a02fb42fb5a584b5bdb5e3a2042eb\string5.cpp
+	<iostream>
+	<cstring>
+	"memtrace.h"
+	"string5.h"
+
+1615363244 source:c:\users\tamás\documents\proglabor2\2022 onallo\lab_05-master-9530f564588a02fb42fb5a584b5bdb5e3a2042eb\string5_test.cpp
+	<iostream>
+	<sstream>
+	<clocale>
+	<windows.h>
+	"memtrace.h"
+	"gtest_lite.h"
+	"string5.h"
+	"rendez.h"
+
+1615363244 c:\users\tamás\documents\proglabor2\2022 onallo\lab_05-master-9530f564588a02fb42fb5a584b5bdb5e3a2042eb\gtest_lite.h
+	<iostream>
+	<cassert>
+	<cmath>
+	<cstring>
+	<limits>
+	<cstdlib>
+	<string>
+	<fstream>
+	"memtrace.h"
+
