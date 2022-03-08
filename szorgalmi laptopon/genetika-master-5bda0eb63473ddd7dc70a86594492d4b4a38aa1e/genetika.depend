@@ -1,0 +1,59 @@
+# depslib dependency file v1.0
+1644349390 source:c:\proglabor2\2022 onallo\genetika-master-5bda0eb63473ddd7dc70a86594492d4b4a38aa1e\genetika_teszt.cpp
+	<iostream>
+	"gtest_lite.h"
+	"allapotgep.h"
+	"memtrace.h"
+
+1644349390 c:\proglabor2\2022 onallo\genetika-master-5bda0eb63473ddd7dc70a86594492d4b4a38aa1e\gtest_lite.h
+	<iostream>
+	<cassert>
+	<cmath>
+	<cstring>
+	<limits>
+	<cstdlib>
+	<string>
+	<fstream>
+	"memtrace.h"
+
+1644349390 c:\proglabor2\2022 onallo\genetika-master-5bda0eb63473ddd7dc70a86594492d4b4a38aa1e\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<list>
+	<map>
+	<algorithm>
+	<functional>
+	<memory>
+	<iomanip>
+	<locale>
+	<typeinfo>
+	<ostream>
+	<stdexcept>
+
+1646672400 c:\proglabor2\2022 onallo\genetika-master-5bda0eb63473ddd7dc70a86594492d4b4a38aa1e\allapotgep.h
+	<locale>
+	<iostream>
+	<exception>
+	<string.h>
+	<fstream>
+	"memtrace.h"
+
+1644349390 source:c:\proglabor2\2022 onallo\genetika-master-5bda0eb63473ddd7dc70a86594492d4b4a38aa1e\memtrace.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+
+1646672325 source:c:\proglabor2\2022 onallo\genetika-master-5bda0eb63473ddd7dc70a86594492d4b4a38aa1e\allapotgep.cpp
+	<iostream>
+	<fstream>
+	"allapotgep.h"
+	"memtrace.h"
+

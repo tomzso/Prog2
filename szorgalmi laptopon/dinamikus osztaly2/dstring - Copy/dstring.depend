@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1646656292 source:c:\proglabor2\dinamikus string osztály\dstring\main.cpp
+	<iostream>
+	<string.h>
+
+1646664275 source:c:\proglabor2\test\dinamikus osztaly2\dstring\main.cpp
+	<iostream>
+	<string.h>
+	<fstream>
+	"gtest_lite.h"
+	"memtrace.h"
+	<locale>
+	<exception>
+
+1582131033 c:\proglabor2\test\dinamikus osztaly2\dstring\gtest_lite.h
+	<iostream>
+	<cassert>
+	<cmath>
+	<cstring>
+	<limits>
+	<string>
+	<fstream>
+	"memtrace.h"
+
+1582131033 c:\proglabor2\test\dinamikus osztaly2\dstring\memtrace.h
+	<new>
+	<cstdio>
+	<stdlib.h>
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<list>
+	<map>
+	<algorithm>
+	<functional>
+
+1582131033 source:c:\proglabor2\test\dinamikus osztaly2\dstring\memtrace.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	"memtrace.h"
+
