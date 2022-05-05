@@ -7,6 +7,8 @@
 #include "konyv.h"
 #include "regeny.h"
 #include "tankonyv.h"
+#include "kivetelosztalyok.h"
+
 //#include "segedfuggvenyek.h"
 
 
@@ -26,6 +28,7 @@ public:
 	Konyv* operator[](int i) const;
 	~Konyvtar();
 	void load();
+	void add_konyv_inputline(std::string input_konyv_adatok);
 	void add_by_user();
 
 };

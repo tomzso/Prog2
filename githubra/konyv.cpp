@@ -1,4 +1,5 @@
 #include "konyv.h"
+#include "memtrace.h"
 
 Konyv::Konyv() :kiadasiev(0), cim(""), szerzo(""), tipus(0) {}
 Konyv::Konyv(int kiadasiev, std::string cim, std::string szerzo, int az) :kiadasiev(kiadasiev), cim(cim), szerzo(szerzo), tipus(az) {}

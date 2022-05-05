@@ -1,5 +1,15 @@
 #include "tankonyv.h"
-Tankonyv::Tankonyv(int kiadasiev, std::string cim, std::string szerzo, std::string targynev, int kor, int az) :Konyv(kiadasiev, cim, szerzo, az), targynev(targynev), korosztaly(kor) {}
+#include "memtrace.h"
+#include "kivetelosztalyok.h"
+
+Tankonyv::Tankonyv(int kiadasiev, std::string cim, std::string szerzo, std::string targynev, int kor, int az) :Konyv(kiadasiev, cim, szerzo, az), targynev(targynev), korosztaly(kor) {
+	if (kiadasiev < 1000 || kiadasiev > 2022) {
+		throw OutOfRange_kiadasiev();
+	}
+	if (kor < 1 || kor > 12) {
+		throw OutOfRange_evfolyam();
+	}
+}
 void Tankonyv::print(std::ostream& os, int i)const {
 	this->Konyv::print(os, i);
 	if (i == 0)

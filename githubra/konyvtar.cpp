@@ -1,4 +1,5 @@
 #include "konyvtar.h"
+#include "memtrace.h"
 
 Konyvtar::Konyvtar() :db(0), konyvtar(new Konyv* [0]) {}
 int Konyvtar::getdb()const { return db; }
@@ -11,7 +12,7 @@ void Konyvtar::add(Konyv* ujkonyv) {
 	db++;
 	delete[] konyvtar;
 	konyvtar = ujkonyvtar;
-	//Konyv* ujkonyv2 = new Tankonyv(2012, "Matematika", "G. Veronika", "matek", 8);
+	
 }
 
 void Konyvtar::clear_all() {
@@ -19,10 +20,12 @@ void Konyvtar::clear_all() {
 		delete konyvtar[i];
 	}
 	delete[] konyvtar;
+	konyvtar = new Konyv * [0];
+	db = 0;
 }
 void Konyvtar::list(std::ostream& os, int tipus)const {
 	if (db == 0) {
-		throw("Ures a lista!\n");
+		throw Empty_lista();
 	}
 	if (tipus == 0) {
 		for (int i = 0;i < 115;i++) {
@@ -51,10 +54,11 @@ void Konyvtar::list(std::ostream& os, int tipus)const {
 }
 void Konyvtar::remove(int index) {
 	if (db == 0) {
-		throw("Ures a lista!\n");
+		throw Empty_lista();
 	}
 	int sorszam = index;
 	sorszam -= 1;
+
 
 	if (sorszam < db && sorszam >= 0) {
 		Konyv** ujkonyvtar = new Konyv * [db - 1];
@@ -75,6 +79,9 @@ void Konyvtar::remove(int index) {
 		konyvtar = ujkonyvtar;
 
 	}
+	else {
+		throw OutOfRange_index();
+	}
 
 }
 
@@ -89,12 +96,16 @@ void Konyvtar::save() {
 }
 
 Konyv* Konyvtar::operator[](int i) const {
+	if (i < 0 || i >= db) {
+		throw OutOfRange_index();
+	}
 	return konyvtar[i];
 }
 
 
 Konyvtar::~Konyvtar() {
 	this->clear_all();
+	delete[] konyvtar;
 }
 
 void Konyvtar::load() {
@@ -113,7 +124,7 @@ void Konyvtar::load() {
 				std::string ujcim = star2whitespace(cim);
 				std::string ujszerzo = star2whitespace(szerzo);
 				std::string ujtargynev = star2whitespace(targynev);
-				//std::cout << ujcim << ujszerzo << kiadasiev << ujtargynev << korosztaly << std::endl;
+				
 				this->add(new Tankonyv(kiadasiev, ujcim, ujszerzo, ujtargynev, korosztaly));
 			}
 			if (konyvtipus == 3) {
@@ -124,21 +135,15 @@ void Konyvtar::load() {
 				std::string ujcim = star2whitespace(cim);
 				std::string ujszerzo = star2whitespace(szerzo);
 				std::string ujfohos = star2whitespace(fohos);
-				//std::cout << ujcim << ujszerzo << kiadasiev << ujfohos << std::endl;
+				
 				this->add(new Regeny(kiadasiev, ujcim, ujszerzo, ujfohos));
 			}
 		}
 
 	}
 }
-void Konyvtar::add_by_user() {
-	std::string input_konyv_adatok;
-
-	std::cout << "Tankkonyv eseten (kiadasi ev, cim, szerzo, targy, evfolyam)" << std::endl;
-	std::cout << "Regeny eseten (kiadasi ev, cim, szerzo, fohos)" << std::endl;
-	std::cout << std::endl;
-	std::cout << "Kerem a konyv adatait: ";
-	std::getline(std::cin, input_konyv_adatok);
+void Konyvtar::add_konyv_inputline(std::string input_konyv_adatok) {
+	//std::string input_konyv_adatok = "hello";
 	int i = 0;
 	int vesszokszama = 0;
 	while (input_konyv_adatok[i] != '\0') {
@@ -149,8 +154,8 @@ void Konyvtar::add_by_user() {
 	}
 
 	if (!(vesszokszama == 3 || vesszokszama == 4)) {
-		//std::cout << "hiba" << std::endl;
-		throw("Helytelen adatbevitel");
+
+		throw Incorrect_input();
 	}
 	if (vesszokszama == 3) {
 
@@ -166,7 +171,7 @@ void Konyvtar::add_by_user() {
 			else {
 				if (vesszok == 0) {
 					if (!isdigit(input_konyv_adatok[e])) {
-						throw("Az ev nem szam");
+						throw NotNumber_kiadasiev();
 					}
 					ev += input_konyv_adatok[e];
 				}
@@ -182,11 +187,6 @@ void Konyvtar::add_by_user() {
 			}
 		}
 
-
-
-		if (std::stoi(ev) < 1000 || std::stoi(ev) > 2022) {
-			throw("Osregi vagy tul vadonatuj a konyv!");
-		}
 		this->add(new Regeny(std::stoi(ev), cim, szerzo, fohos));
 	}
 	if (vesszokszama == 4) {
@@ -205,7 +205,7 @@ void Konyvtar::add_by_user() {
 			else {
 				if (vesszok == 0) {
 					if (!isdigit(input_konyv_adatok[e])) {
-						throw("Az ev nem szam");
+						throw NotNumber_kiadasiev();
 					}
 					ev += input_konyv_adatok[e];
 				}
@@ -220,21 +220,27 @@ void Konyvtar::add_by_user() {
 				}
 				if (vesszok == 4) {
 					if (!isdigit(input_konyv_adatok[e])) {
-						throw("Az evfolyam nem szam");
+						throw NotNumber_evfolyam();
 					}
 
 					evfolyam += input_konyv_adatok[e];
 				}
 			}
 		}
-		if (std::stoi(ev) < 1000 || std::stoi(ev) > 2022) {
-			throw("Osregi vagy tul vadonatuj a konyv!");
-		}
-		if (std::stoi(evfolyam) < 1 || std::stoi(evfolyam) > 12) {
-			throw("Nem letezo evfolyamot adott meg!");
-		}
 
-		//std::cout << ev << " " << cim << " " << szerzo << " " << targy << " " << evfolyam << std::endl;
 		this->add(new Tankonyv(std::stoi(ev), cim, szerzo, targy, std::stoi(evfolyam)));
 	}
+}
+
+void Konyvtar::add_by_user() {
+	
+	std::string input_konyv_adatok;
+
+	std::cout << "Tankkonyv eseten (kiadasi ev, cim, szerzo, targy, evfolyam)" << std::endl;
+	std::cout << "Regeny eseten (kiadasi ev, cim, szerzo, fohos)" << std::endl;
+	std::cout << std::endl;
+	std::cout << "Kerem a konyv adatait: ";
+	std::getline(std::cin, input_konyv_adatok);
+	this->add_konyv_inputline(input_konyv_adatok);
+	
 }

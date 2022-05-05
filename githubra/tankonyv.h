@@ -4,6 +4,7 @@
 #include <iostream>
 #include "konyv.h"
 
+
 class Tankonyv :public Konyv {
 	std::string targynev;
 	int korosztaly;
